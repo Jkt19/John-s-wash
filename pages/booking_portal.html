@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Service - Johns Wash Premium</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Book premium automotive care services with Johns Wash. Easy online scheduling, mobile service options, and instant confirmation." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fjohnswash6310back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-custom sticky top-0 z-50">
+        <nav class="container-custom px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary mr-3" viewBox="0 0 40 40" fill="currentColor">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z" fill="currentColor" opacity="0.2"/>
+                        <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                        <path d="M8 20h4m16 0h4M20 8v4m0 16v4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">Johns Wash Premium</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-base">Home</a>
+                    <a href="services_menu.html" class="text-text-secondary hover:text-primary transition-base">Services</a>
+                    <a href="about_johns_wash.html" class="text-text-secondary hover:text-primary transition-base">About</a>
+                    <a href="contact_locations.html" class="text-text-secondary hover:text-primary transition-base">Contact</a>
+                    <a href="customer_dashboard.html" class="text-text-secondary hover:text-primary transition-base">Account</a>
+                    <a href="booking_portal.html" class="btn-primary">Book Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-border">
+                    <a href="homepage.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Home</a>
+                    <a href="services_menu.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Services</a>
+                    <a href="about_johns_wash.html" class="block px-3 py-2 text-text-secondary hover:text-primary">About</a>
+                    <a href="contact_locations.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Contact</a>
+                    <a href="customer_dashboard.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Account</a>
+                    <a href="booking_portal.html" class="block px-3 py-2 btn-primary text-center">Book Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Progress Indicator -->
+    <section class="bg-surface py-4">
+        <div class="container-custom">
+            <div class="flex items-center justify-center space-x-4 md:space-x-8">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-semibold">1</div>
+                    <span class="ml-2 text-sm font-semibold text-primary">Service Selection</span>
+                </div>
+                <div class="w-8 h-0.5 bg-border"></div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-border text-text-muted rounded-full flex items-center justify-center text-sm font-semibold">2</div>
+                    <span class="ml-2 text-sm text-text-muted">Vehicle Details</span>
+                </div>
+                <div class="w-8 h-0.5 bg-border"></div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-border text-text-muted rounded-full flex items-center justify-center text-sm font-semibold">3</div>
+                    <span class="ml-2 text-sm text-text-muted">Scheduling</span>
+                </div>
+                <div class="w-8 h-0.5 bg-border"></div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-border text-text-muted rounded-full flex items-center justify-center text-sm font-semibold">4</div>
+                    <span class="ml-2 text-sm text-text-muted">Payment</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Booking Content -->
+    <main class="section-padding">
+        <div class="container-custom">
+            <!-- Step 1: Service Selection -->
+            <div id="step-1" class="booking-step">
+                <div class="text-center mb-12">
+                    <h1 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                        Choose Your Service
+                    </h1>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Select the perfect service package for your vehicle's needs
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                    <!-- Mobile Detailing Service -->
+                    <div class="card service-card cursor-pointer hover:shadow-custom-lg transition-all duration-300" data-service="mobile-detailing" data-price="89">
+                        <div class="relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Mobile detailing service" class="w-full h-48 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2'; this.onerror=null;" />
+                            <div class="absolute top-3 left-3 bg-accent text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                                Most Popular
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-3">Mobile Detailing</h3>
+                        <p class="text-text-secondary mb-4">Complete exterior and interior cleaning at your location with professional equipment.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm">
+                                <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Exterior wash & wax
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Interior vacuum & wipe down
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Tire shine & wheel cleaning
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$89</span>
+                            <span class="text-sm text-text-secondary">2-3 hours</span>
+                        </div>
+                    </div>
+
+                    <!-- Premium Package -->
+                    <div class="card service-card cursor-pointer hover:shadow-custom-lg transition-all duration-300" data-service="premium-package" data-price="199">
+                        <div class="relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Premium detailing package" class="w-full h-48 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/05/06/16/32/car-1376190_400.jpg'; this.onerror=null;" />
+                            <div class="absolute top-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Premium
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-3">Premium Package</h3>
+                        <p class="text-text-secondary mb-4">Complete transformation with paint correction and interior deep cleaning.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm">
+                                <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Paint correction & ceramic coating
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Deep interior detailing
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Engine bay cleaning
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$199</span>
+                            <span class="text-sm text-text-secondary">4-5 hours</span>
+                        </div>
+                    </div>
+
+                    <!-- Eco-Friendly Service -->
+                    <div class="card service-card cursor-pointer hover:shadow-custom-lg transition-all duration-300" data-service="eco-friendly" data-price="109">
+                        <div class="relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Eco-friendly car wash" class="w-full h-48 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2'; this.onerror=null;" />
+                            <div class="absolute top-3 left-3 bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Eco-Friendly
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-3">Eco-Friendly Service</h3>
+                        <p class="text-text-secondary mb-4">Environmentally conscious cleaning with biodegradable products and water conservation.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm">
+                                <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Biodegradable products only
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Water-saving techniques
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Carbon-neutral service
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$109</span>
+                            <span class="text-sm text-text-secondary">2-3 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add-ons Section -->
+                <div class="card mb-8">
+                    <h3 class="font-montserrat text-xl font-semibold text-primary mb-6">Optional Add-ons</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-base">
+                            <input type="checkbox" class="addon-checkbox mr-3" data-addon="headlight-restoration" data-price="35" />
+                            <div>
+                                <span class="font-semibold text-primary">Headlight Restoration</span>
+                                <span class="block text-sm text-text-secondary">+$35</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-base">
+                            <input type="checkbox" class="addon-checkbox mr-3" data-addon="pet-hair-removal" data-price="25" />
+                            <div>
+                                <span class="font-semibold text-primary">Pet Hair Removal</span>
+                                <span class="block text-sm text-text-secondary">+$25</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-base">
+                            <input type="checkbox" class="addon-checkbox mr-3" data-addon="odor-elimination" data-price="40" />
+                            <div>
+                                <span class="font-semibold text-primary">Odor Elimination</span>
+                                <span class="block text-sm text-text-secondary">+$40</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Service Summary -->
+                <div class="card bg-surface mb-8">
+                    <h3 class="font-montserrat text-xl font-semibold text-primary mb-4">Service Summary</h3>
+                    <div id="service-summary">
+                        <p class="text-text-secondary">Please select a service to see the summary</p>
+                    </div>
+                    <div class="border-t border-border pt-4 mt-4">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-primary">Total Cost:</span>
+                            <span id="total-cost" class="text-2xl font-bold text-primary">$0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-end">
+                    <button id="continue-to-vehicle" class="btn-primary disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        Continue to Vehicle Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Vehicle Details -->
+            <div id="step-2" class="booking-step hidden">
+                <div class="text-center mb-12">
+                    <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                        Vehicle Information
+                    </h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Tell us about your vehicle so we can provide the best service
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Vehicle Details Form -->
+                    <div class="card">
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-6">Vehicle Details</h3>
+                        <form class="space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">Make</label>
+                                    <select id="vehicle-make" class="input-field" required>
+                                        <option value>Select Make</option>
+                                        <option value="audi">Audi</option>
+                                        <option value="bmw">BMW</option>
+                                        <option value="mercedes">Mercedes-Benz</option>
+                                        <option value="lexus">Lexus</option>
+                                        <option value="tesla">Tesla</option>
+                                        <option value="toyota">Toyota</option>
+                                        <option value="honda">Honda</option>
+                                        <option value="ford">Ford</option>
+                                        <option value="chevrolet">Chevrolet</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">Model</label>
+                                    <input type="text" id="vehicle-model" class="input-field" placeholder="e.g., Model S, X5, C-Class" required />
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">Year</label>
+                                    <select id="vehicle-year" class="input-field" required>
+                                        <option value>Select Year</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="older">2017 or Older</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">Color</label>
+                                    <input type="text" id="vehicle-color" class="input-field" placeholder="e.g., Pearl White, Jet Black" required />
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-primary mb-2">Vehicle Condition Notes</label>
+                                <textarea id="condition-notes" class="input-field" rows="3" placeholder="Any scratches, dents, or special concerns we should know about?"></textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Photo Upload -->
+                    <div class="card">
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-6">Vehicle Photos (Optional)</h3>
+                        <div class="space-y-4">
+                            <div class="border-2 border-dashed border-border rounded-lg p-8 text-center">
+                                <svg class="h-12 w-12 text-text-muted mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <p class="text-text-secondary mb-2">Upload photos of your vehicle</p>
+                                <p class="text-sm text-text-muted mb-4">Help us prepare for your service by showing any areas of concern</p>
+                                <button type="button" class="btn-secondary" onclick="document.getElementById('photo-upload').click()">
+                                    Choose Photos
+                                </button>
+                                <input type="file" id="photo-upload" class="hidden" multiple accept="image/*" />
+                            </div>
+                            <div id="photo-preview" class="grid grid-cols-2 gap-4 hidden">
+                                <!-- Photo previews will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button id="back-to-service" class="btn-secondary">
+                        Back to Service Selection
+                    </button>
+                    <button id="continue-to-scheduling" class="btn-primary disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        Continue to Scheduling
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Scheduling -->
+            <div id="step-3" class="booking-step hidden">
+                <div class="text-center mb-12">
+                    <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                        Schedule Your Service
+                    </h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Choose your preferred date, time, and location
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Calendar and Time Selection -->
+                    <div class="card">
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-6">Select Date & Time</h3>
+                        
+                        <!-- Calendar -->
+                        <div class="mb-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="font-semibold text-primary">September 2025</h4>
+                                <div class="flex space-x-2">
+                                    <button class="p-2 hover:bg-surface rounded-lg transition-base">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-surface rounded-lg transition-base">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-7 gap-1 mb-2">
+                                <div class="text-center text-sm font-semibold text-text-secondary p-2">Sun</div>
+                                <div class="text-center text-sm font-semibold text-text-secondary p-2">Mon</div>
+                                <div class="text-center text-sm font-semibold text-text-secondary p-2">Tue</div>
+                                <div class="text-center text-sm font-semibold text-text-secondary p-2">Wed</div>
+                                <div class="text-center text-sm font-semibold text-text-secondary p-2">Thu</div>
+                                <div class="text-center text-sm font-semibold text-text-secondary p-2">Fri</div>
+                                <div class="text-center text-sm font-semibold text-text-secondary p-2">Sat</div>
+                            </div>
+                            
+                            <div class="grid grid-cols-7 gap-1">
+                                <!-- Calendar days -->
+                                <div class="text-center p-2 text-text-muted">1</div>
+                                <div class="text-center p-2 text-text-muted">2</div>
+                                <div class="text-center p-2 text-text-muted">3</div>
+                                <div class="text-center p-2 text-text-muted">4</div>
+                                <div class="text-center p-2 text-text-muted">5</div>
+                                <div class="text-center p-2 text-text-muted">6</div>
+                                <div class="text-center p-2 text-text-muted">7</div>
+                                <div class="text-center p-2 text-text-muted">8</div>
+                                <div class="text-center p-2 text-text-muted">9</div>
+                                <div class="text-center p-2 text-text-muted">10</div>
+                                <div class="text-center p-2 text-text-muted">11</div>
+                                <div class="text-center p-2 text-text-muted">12</div>
+                                <div class="text-center p-2 bg-primary text-white rounded-lg font-semibold cursor-pointer">13</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-14">14</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-15">15</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-16">16</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-17">17</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-18">18</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-19">19</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-20">20</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-21">21</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-22">22</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-23">23</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-24">24</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-25">25</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-26">26</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-27">27</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-28">28</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-29">29</div>
+                                <div class="text-center p-2 hover:bg-surface rounded-lg cursor-pointer transition-base calendar-day" data-date="2025-09-30">30</div>
+                            </div>
+                        </div>
+
+                        <!-- Time Slots -->
+                        <div id="time-slots" class="hidden">
+                            <h4 class="font-semibold text-primary mb-4">Available Time Slots</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button class="time-slot p-3 border border-border rounded-lg text-center hover:bg-surface transition-base" data-time="08:00">
+                                    <div class="font-semibold">8:00 AM</div>
+                                    <div class="text-sm text-success">Available</div>
+                                </button>
+                                <button class="time-slot p-3 border border-border rounded-lg text-center hover:bg-surface transition-base" data-time="10:00">
+                                    <div class="font-semibold">10:00 AM</div>
+                                    <div class="text-sm text-success">Available</div>
+                                </button>
+                                <button class="time-slot p-3 border border-border rounded-lg text-center hover:bg-surface transition-base" data-time="14:00">
+                                    <div class="font-semibold">2:00 PM</div>
+                                    <div class="text-sm text-success">Available</div>
+                                </button>
+                                <button class="time-slot p-3 border border-border rounded-lg text-center hover:bg-surface transition-base" data-time="16:00">
+                                    <div class="font-semibold">4:00 PM</div>
+                                    <div class="text-sm text-success">Available</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location Selection -->
+                    <div class="card">
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-6">Service Location</h3>
+                        
+                        <div class="space-y-4 mb-6">
+                            <label class="flex items-start p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-base">
+                                <input type="radio" name="service-location" value="mobile" class="mt-1 mr-3" checked />
+                                <div class="flex-1">
+                                    <div class="flex items-center mb-2">
+                                        <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                                            <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z"/>
+                                        </svg>
+                                        <span class="font-semibold text-primary">Mobile Service</span>
+                                        <span class="ml-2 bg-accent text-primary px-2 py-1 rounded-full text-xs font-semibold">Recommended</span>
+                                    </div>
+                                    <p class="text-sm text-text-secondary">We come to your location with all professional equipment</p>
+                                </div>
+                            </label>
+                            
+                            <label class="flex items-start p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-base">
+                                <input type="radio" name="service-location" value="facility" class="mt-1 mr-3" />
+                                <div class="flex-1">
+                                    <div class="flex items-center mb-2">
+                                        <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm3 5a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                        <span class="font-semibold text-primary">Facility Drop-off</span>
+                                    </div>
+                                    <p class="text-sm text-text-secondary">Drop off at our premium facility - 123 Auto Care Blvd</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Mobile Service Address -->
+                        <div id="mobile-address" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-primary mb-2">Service Address</label>
+                                <input type="text" id="service-address" class="input-field" placeholder="Enter your address" required />
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">City</label>
+                                    <input type="text" id="service-city" class="input-field" placeholder="City" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">ZIP Code</label>
+                                    <input type="text" id="service-zip" class="input-field" placeholder="ZIP Code" required />
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-primary mb-2">Special Instructions</label>
+                                <textarea id="special-instructions" class="input-field" rows="3" placeholder="Parking instructions, gate codes, or other access details"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Service Area Map -->
+                        <div class="mt-6 p-4 bg-surface rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <svg class="h-5 w-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm font-semibold text-success">Within Service Area</span>
+                            </div>
+                            <p class="text-sm text-text-secondary">Mobile service available with no additional travel fee</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button id="back-to-vehicle" class="btn-secondary">
+                        Back to Vehicle Details
+                    </button>
+                    <button id="continue-to-payment" class="btn-primary disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        Continue to Payment
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 4: Payment -->
+            <div id="step-4" class="booking-step hidden">
+                <div class="text-center mb-12">
+                    <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                        Payment & Confirmation
+                    </h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Review your booking and complete payment
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Booking Summary -->
+                    <div class="card">
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-6">Booking Summary</h3>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center pb-2 border-b border-border">
+                                <span class="text-text-secondary">Service</span>
+                                <span id="summary-service" class="font-semibold">Mobile Detailing</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-border">
+                                <span class="text-text-secondary">Vehicle</span>
+                                <span id="summary-vehicle" class="font-semibold">2024 Tesla Model S</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-border">
+                                <span class="text-text-secondary">Date & Time</span>
+                                <span id="summary-datetime" class="font-semibold">Sep 14, 2025 at 10:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-border">
+                                <span class="text-text-secondary">Location</span>
+                                <span id="summary-location" class="font-semibold">Mobile Service</span>
+                            </div>
+                            <div id="summary-addons" class="space-y-2">
+                                <!-- Add-ons will be populated here -->
+                            </div>
+                        </div>
+
+                        <div class="bg-surface p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-text-secondary">Subtotal</span>
+                                <span id="summary-subtotal">$89.00</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-text-secondary">Tax</span>
+                                <span id="summary-tax">$7.12</span>
+                            </div>
+                            <div class="flex justify-between items-center text-lg font-bold text-primary border-t border-border pt-2">
+                                <span>Total</span>
+                                <span id="summary-total">$96.12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Form -->
+                    <div class="card">
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-6">Payment Information</h3>
+                        
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-primary mb-2">Payment Method</label>
+                                <div class="space-y-3">
+                                    <label class="flex items-center p-3 border border-border rounded-lg cursor-pointer hover:bg-surface transition-base">
+                                        <input type="radio" name="payment-method" value="card" class="mr-3" checked />
+                                        <svg class="h-6 w-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
+                                        </svg>
+                                        <span class="font-semibold">Credit/Debit Card</span>
+                                    </label>
+                                    <label class="flex items-center p-3 border border-border rounded-lg cursor-pointer hover:bg-surface transition-base">
+                                        <input type="radio" name="payment-method" value="paypal" class="mr-3" />
+                                        <svg class="h-6 w-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm5 3a1 1 0 000 2h2a1 1 0 100-2H9zM7 8a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-1h2a1 1 0 100-2H9a1 1 0 00-1 1v1H7V8z"/>
+                                        </svg>
+                                        <span class="font-semibold">PayPal</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="card-details" class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">Card Number</label>
+                                    <input type="text" class="input-field" placeholder="1234 5678 9012 3456" required />
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-primary mb-2">Expiry Date</label>
+                                        <input type="text" class="input-field" placeholder="MM/YY" required />
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-primary mb-2">CVV</label>
+                                        <input type="text" class="input-field" placeholder="123" required />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">Cardholder Name</label>
+                                    <input type="text" class="input-field" placeholder="John Doe" required />
+                                </div>
+                            </div>
+
+                            <div class="border-t border-border pt-4">
+                                <h4 class="font-semibold text-primary mb-4">Contact Information</h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-primary mb-2">Email</label>
+                                        <input type="email" class="input-field" placeholder="john@example.com" required />
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-primary mb-2">Phone</label>
+                                        <input type="tel" class="input-field" placeholder="(555) 123-4567" required />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-border pt-4">
+                                <label class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-3" required />
+                                    <span class="text-sm text-text-secondary">
+                                        I agree to the <a href="javascript:void(0)" class="text-primary hover:underline">Terms of Service</a> and 
+                                        <a href="javascript:void(0)" class="text-primary hover:underline">Privacy Policy</a>
+                                    </span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button id="back-to-scheduling" class="btn-secondary">
+                        Back to Scheduling
+                    </button>
+                    <button id="complete-booking" class="btn-primary">
+                        Complete Booking
+                    </button>
+                </div>
+            </div>
+
+            <!-- Confirmation Step -->
+            <div id="confirmation" class="booking-step hidden">
+                <div class="text-center mb-12">
+                    <div class="w-20 h-20 bg-success rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="h-10 w-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                        Booking Confirmed!
+                    </h2>
+                    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                        Your service has been scheduled. We'll send you a confirmation email with all the details.
+                    </p>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <div class="card mb-8">
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-6">Booking Details</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center pb-2 border-b border-border">
+                                <span class="text-text-secondary">Booking ID</span>
+                                <span class="font-semibold font-mono">#JW-2025-0913-001</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-border">
+                                <span class="text-text-secondary">Service</span>
+                                <span class="font-semibold">Mobile Detailing</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-border">
+                                <span class="text-text-secondary">Date & Time</span>
+                                <span class="font-semibold">September 14, 2025 at 10:00 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-border">
+                                <span class="text-text-secondary">Estimated Duration</span>
+                                <span class="font-semibold">2-3 hours</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-text-secondary">Total Paid</span>
+                                <span class="font-semibold text-success">$96.12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-8">
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-4">Preparation Instructions</h3>
+                        <ul class="space-y-2 text-text-secondary">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Remove all personal items from your vehicle
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Ensure access to water and electrical outlet (mobile service)
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Park in a shaded area if possible
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-accent mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Our team will arrive 15 minutes before scheduled time
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="window.print()" class="btn-secondary">
+                            Print Confirmation
+                        </button>
+                        <a href="customer_dashboard.html" class="btn-primary text-center">
+                            View in Dashboard
+                        </a>
+                        <a href="homepage.html" class="btn-accent text-center">
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white section-padding">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-accent mr-2" viewBox="0 0 40 40" fill="currentColor">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z" fill="currentColor" opacity="0.2"/>
+                            <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                            <path d="M8 20h4m16 0h4M20 8v4m0 16v4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="font-montserrat font-bold text-lg">Johns Wash Premium</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">Expert automotive care with eco-friendly products and mobile convenience.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-base">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-base">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-base">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.017 0H7.983C3.582 0 0 3.582 0 7.983v4.034C0 16.418 3.582 20 7.983 20h4.034C16.418 20 20 16.418 20 12.017V7.983C20 3.582 16.418 0 12.017 0zM10 15A5 5 0 1110 5a5 5 0 010 10zm6.408-10.845a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-montserrat font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services_menu.html" class="text-gray-300 hover:text-accent transition-base">Mobile Detailing</a></li>
+                        <li><a href="services_menu.html" class="text-gray-300 hover:text-accent transition-base">Premium Packages</a></li>
+                        <li><a href="services_menu.html" class="text-gray-300 hover:text-accent transition-base">Paint Protection</a></li>
+                        <li><a href="services_menu.html" class="text-gray-300 hover:text-accent transition-base">Eco-Friendly Options</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="font-montserrat font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about_johns_wash.html" class="text-gray-300 hover:text-accent transition-base">About Us</a></li>
+                        <li><a href="contact_locations.html" class="text-gray-300 hover:text-accent transition-base">Contact</a></li>
+                        <li><a href="customer_dashboard.html" class="text-gray-300 hover:text-accent transition-base">Customer Portal</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-base">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-montserrat font-semibold text-lg mb-4">Contact</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span class="text-gray-300">(555) 123-WASH</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span class="text-gray-300">info@johnswash.com</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-5 w-5 text-accent mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-300">Serving Metro Area<br />25+ Mile Radius</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">© 2025 Johns Wash Premium. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-accent text-sm transition-base">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-accent text-sm transition-base">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-accent text-sm transition-base">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Booking flow state
+        let bookingData = {
+            service: null,
+            addons: [],
+            vehicle: {},
+            schedule: {},
+            payment: {},
+            totalCost: 0
+        };
+
+        // Step navigation
+        function showStep(stepNumber) {
+            // Hide all steps
+            document.querySelectorAll('.booking-step').forEach(step => {
+                step.classList.add('hidden');
+            });
+            
+            // Show current step
+            document.getElementById(`step-${stepNumber}`).classList.remove('hidden');
+            
+            // Update progress indicator
+            updateProgressIndicator(stepNumber);
+        }
+
+        function updateProgressIndicator(currentStep) {
+            for (let i = 1; i <= 4; i++) {
+                const stepElement = document.querySelector(`.flex:nth-child(${i * 2 - 1})`);
+                const circle = stepElement.querySelector('.w-8.h-8');
+                const text = stepElement.querySelector('span');
+                
+                if (i <= currentStep) {
+                    circle.className = 'w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-semibold';
+                    text.className = 'ml-2 text-sm font-semibold text-primary';
+                } else {
+                    circle.className = 'w-8 h-8 bg-border text-text-muted rounded-full flex items-center justify-center text-sm font-semibold';
+                    text.className = 'ml-2 text-sm text-text-muted';
+                }
+            }
+        }
+
+        // Service selection
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove selection from other cards
+                document.querySelectorAll('.service-card').forEach(c => {
+                    c.classList.remove('ring-2', 'ring-primary');
+                });
+                
+                // Add selection to clicked card
+                this.classList.add('ring-2', 'ring-primary');
+                
+                // Store service data
+                bookingData.service = {
+                    name: this.dataset.service,
+                    price: parseInt(this.dataset.price),
+                    title: this.querySelector('h3').textContent
+                };
+                
+                updateServiceSummary();
+                document.getElementById('continue-to-vehicle').disabled = false;
+            });
+        });
+
+        // Add-on selection
+        document.querySelectorAll('.addon-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    bookingData.addons.push({
+                        name: this.dataset.addon,
+                        price: parseInt(this.dataset.price)
+                    });
+                } else {
+                    bookingData.addons = bookingData.addons.filter(addon => addon.name !== this.dataset.addon);
+                }
+                updateServiceSummary();
+            });
+        });
+
+        function updateServiceSummary() {
+            if (!bookingData.service) return;
+            
+            let summary = `<div class="space-y-2">`;
+            summary += `<div class="flex justify-between"><span>${bookingData.service.title}</span><span>$${bookingData.service.price}</span></div>`;
+            
+            bookingData.totalCost = bookingData.service.price;
+            
+            bookingData.addons.forEach(addon => {
+                const addonName = addon.name.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
+                summary += `<div class="flex justify-between text-sm text-text-secondary"><span>${addonName}</span><span>+$${addon.price}</span></div>`;
+                bookingData.totalCost += addon.price;
+            });
+            
+            summary += `</div>`;
+            
+            document.getElementById('service-summary').innerHTML = summary;
+            document.getElementById('total-cost').textContent = `$${bookingData.totalCost}`;
+        }
+
+        // Vehicle form validation
+        function validateVehicleForm() {
+            const make = document.getElementById('vehicle-make').value;
+            const model = document.getElementById('vehicle-model').value;
+            const year = document.getElementById('vehicle-year').value;
+            const color = document.getElementById('vehicle-color').value;
+            
+            const isValid = make && model && year && color;
+            document.getElementById('continue-to-scheduling').disabled = !isValid;
+            
+            if (isValid) {
+                bookingData.vehicle = { make, model, year, color };
+            }
+        }
+
+        // Add event listeners for vehicle form
+        ['vehicle-make', 'vehicle-model', 'vehicle-year', 'vehicle-color'].forEach(id => {
+            document.getElementById(id).addEventListener('input', validateVehicleForm);
+            document.getElementById(id).addEventListener('change', validateVehicleForm);
+        });
+
+        // Photo upload handling
+        document.getElementById('photo-upload').addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            const preview = document.getElementById('photo-preview');
+            
+            if (files.length > 0) {
+                preview.classList.remove('hidden');
+                preview.innerHTML = '';
+                
+                files.forEach((file, index) => {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const div = document.createElement('div');
+                        div.className = 'relative';
+                        div.innerHTML = `
+                            <img src="${e.target.result}" class="w-full h-24 object-cover rounded-lg">
+                            <button type="button" class="absolute top-1 right-1 bg-error text-white rounded-full w-6 h-6 flex items-center justify-center text-xs" onclick="this.parentElement.remove()">×</button>
+                        `;
+                        preview.appendChild(div);
+                    };
+                    reader.readAsDataURL(file);
+                });
+            }
+        });
+
+        // Calendar and scheduling
+        document.querySelectorAll('.calendar-day').forEach(day => {
+            day.addEventListener('click', function() {
+                // Remove selection from other days
+                document.querySelectorAll('.calendar-day').forEach(d => {
+                    d.classList.remove('bg-primary', 'text-white');
+                    d.classList.add('hover:bg-surface');
+                });
+                
+                // Add selection to clicked day
+                this.classList.add('bg-primary', 'text-white');
+                this.classList.remove('hover:bg-surface');
+                
+                // Show time slots
+                document.getElementById('time-slots').classList.remove('hidden');
+                
+                bookingData.schedule.date = this.dataset.date;
+                validateScheduling();
+            });
+        });
+
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', function() {
+                // Remove selection from other slots
+                document.querySelectorAll('.time-slot').forEach(s => {
+                    s.classList.remove('ring-2', 'ring-primary');
+                });
+                
+                // Add selection to clicked slot
+                this.classList.add('ring-2', 'ring-primary');
+                
+                bookingData.schedule.time = this.dataset.time;
+                validateScheduling();
+            });
+        });
+
+        function validateScheduling() {
+            const hasDate = bookingData.schedule.date;
+            const hasTime = bookingData.schedule.time;
+            const hasAddress = document.getElementById('service-address').value;
+            
+            const isValid = hasDate && hasTime && hasAddress;
+            document.getElementById('continue-to-payment').disabled = !isValid;
+        }
+
+        // Address validation
+        ['service-address', 'service-city', 'service-zip'].forEach(id => {
+            document.getElementById(id).addEventListener('input', validateScheduling);
+        });
+
+        // Step navigation buttons
+        document.getElementById('continue-to-vehicle').addEventListener('click', () => showStep(2));
+        document.getElementById('back-to-service').addEventListener('click', () => showStep(1));
+        document.getElementById('continue-to-scheduling').addEventListener('click', () => showStep(3));
+        document.getElementById('back-to-vehicle').addEventListener('click', () => showStep(2));
+        document.getElementById('continue-to-payment').addEventListener('click', () => {
+            updatePaymentSummary();
+            showStep(4);
+        });
+        document.getElementById('back-to-scheduling').addEventListener('click', () => showStep(3));
+
+        function updatePaymentSummary() {
+            // Update summary in payment step
+            document.getElementById('summary-service').textContent = bookingData.service.title;
+            document.getElementById('summary-vehicle').textContent = `${bookingData.vehicle.year} ${bookingData.vehicle.make} ${bookingData.vehicle.model}`;
+            
+            const subtotal = bookingData.totalCost;
+            const tax = Math.round(subtotal * 0.08 * 100) / 100;
+            const total = subtotal + tax;
+            
+            document.getElementById('summary-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('summary-tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('summary-total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        // Complete booking
+        document.getElementById('complete-booking').addEventListener('click', function() {
+            // Simulate payment processing
+            this.textContent = 'Processing...';
+            this.disabled = true;
+            
+            setTimeout(() => {
+                document.getElementById('step-4').classList.add('hidden');
+                document.getElementById('confirmation').classList.remove('hidden');
+                
+                // Update progress to show completion
+                document.querySelectorAll('.w-8.h-8').forEach(circle => {
+                    circle.className = 'w-8 h-8 bg-success text-white rounded-full flex items-center justify-center text-sm font-semibold';
+                });
+                document.querySelectorAll('.ml-2.text-sm').forEach(text => {
+                    text.className = 'ml-2 text-sm font-semibold text-success';
+                });
+            }, 2000);
+        });
+
+        // Initialize first step
+        showStep(1);
+    </script>
+</body>
+</html>

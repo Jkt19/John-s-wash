@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johns Wash Premium - Expert Automotive Care</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Premium automotive care services with mobile detailing, eco-friendly products, and 100% satisfaction guarantee. Your vehicle deserves expert care." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fjohnswash6310back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-custom sticky top-0 z-50">
+        <nav class="container-custom px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary mr-3" viewBox="0 0 40 40" fill="currentColor">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z" fill="currentColor" opacity="0.2"/>
+                        <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                        <path d="M8 20h4m16 0h4M20 8v4m0 16v4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">Johns Wash Premium</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-primary font-semibold border-b-2 border-accent">Home</a>
+                    <a href="services_menu.html" class="text-text-secondary hover:text-primary transition-base">Services</a>
+                    <a href="about_johns_wash.html" class="text-text-secondary hover:text-primary transition-base">About</a>
+                    <a href="contact_locations.html" class="text-text-secondary hover:text-primary transition-base">Contact</a>
+                    <a href="customer_dashboard.html" class="text-text-secondary hover:text-primary transition-base">Account</a>
+                    <a href="booking_portal.html" class="btn-primary">Book Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-border">
+                    <a href="homepage.html" class="block px-3 py-2 text-primary font-semibold">Home</a>
+                    <a href="services_menu.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Services</a>
+                    <a href="about_johns_wash.html" class="block px-3 py-2 text-text-secondary hover:text-primary">About</a>
+                    <a href="contact_locations.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Contact</a>
+                    <a href="customer_dashboard.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Account</a>
+                    <a href="booking_portal.html" class="block px-3 py-2 btn-primary text-center">Book Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Premium car detailing process" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+            <div class="absolute inset-0 bg-primary bg-opacity-60"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+            <h1 class="font-montserrat text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+                Your Vehicle Deserves <span class="text-accent">Expert Care</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 animate-slide-up">
+                Premium automotive detailing with eco-friendly products and 100% satisfaction guarantee
+            </p>
+            
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href="booking_portal.html" class="btn-primary text-lg px-8 py-4 animate-scale-in">
+                    Book Service Now
+                </a>
+                <a href="about_johns_wash.html" class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-montserrat font-semibold transition-base">
+                    View Our Process
+                </a>
+            </div>
+
+            <!-- Real-time Availability Ticker -->
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 inline-block">
+                <div class="flex items-center space-x-2 text-accent">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="font-semibold">Next Available: Tomorrow 2:00 PM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Preview Section -->
+    <section class="section-padding bg-surface">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                    Premium Services Tailored to Your Needs
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    From mobile convenience to eco-friendly solutions, we deliver exceptional results
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Mobile Detailing -->
+                <div class="card group hover:shadow-custom-lg transition-all duration-300 cursor-pointer" onclick="window.location.href='services_menu.html'">
+                    <div class="text-center">
+                        <div class="bg-primary-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:text-white transition-base">
+                            <svg class="h-8 w-8 text-primary group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                                <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-3">Mobile Detailing</h3>
+                        <p class="text-text-secondary mb-4">We come to you with professional equipment and premium products</p>
+                        <div class="opacity-0 group-hover:opacity-100 transition-base">
+                            <span class="text-accent font-semibold">Starting at $89</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Packages -->
+                <div class="card group hover:shadow-custom-lg transition-all duration-300 cursor-pointer" onclick="window.location.href='services_menu.html'">
+                    <div class="text-center">
+                        <div class="bg-primary-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:text-white transition-base">
+                            <svg class="h-8 w-8 text-primary group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-3">Premium Packages</h3>
+                        <p class="text-text-secondary mb-4">Complete interior and exterior transformation with paint protection</p>
+                        <div class="opacity-0 group-hover:opacity-100 transition-base">
+                            <span class="text-accent font-semibold">Starting at $199</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eco-Friendly Options -->
+                <div class="card group hover:shadow-custom-lg transition-all duration-300 cursor-pointer" onclick="window.location.href='services_menu.html'">
+                    <div class="text-center">
+                        <div class="bg-primary-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:text-white transition-base">
+                            <svg class="h-8 w-8 text-primary group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-montserrat text-xl font-semibold text-primary mb-3">Eco-Friendly Options</h3>
+                        <p class="text-text-secondary mb-4">Biodegradable products and water-saving techniques for conscious owners</p>
+                        <div class="opacity-0 group-hover:opacity-100 transition-base">
+                            <span class="text-accent font-semibold">Starting at $109</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Building Section -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                    Why Choose Johns Wash Premium?
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Your peace of mind is our priority with comprehensive protection and guarantees
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Fully Insured & Bonded -->
+                <div class="text-center">
+                    <div class="bg-success-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="h-10 w-10 text-success" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat text-xl font-semibold text-primary mb-3">Fully Insured & Bonded</h3>
+                    <p class="text-text-secondary">Complete protection for your vehicle with comprehensive insurance coverage and bonding</p>
+                </div>
+
+                <!-- 100% Satisfaction Guarantee -->
+                <div class="text-center">
+                    <div class="bg-accent-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="h-10 w-10 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat text-xl font-semibold text-primary mb-3">100% Satisfaction Guarantee</h3>
+                    <p class="text-text-secondary">Not completely satisfied? We'll make it right or provide a full refund</p>
+                </div>
+
+                <!-- Eco-Responsible Products -->
+                <div class="text-center">
+                    <div class="bg-secondary-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="h-10 w-10 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat text-xl font-semibold text-primary mb-3">Eco-Responsible Products</h3>
+                    <p class="text-text-secondary">Biodegradable, non-toxic products that protect your vehicle and the environment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Carousel -->
+    <section class="section-padding bg-surface">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                    What Our Customers Say
+                </h2>
+                <p class="text-lg text-text-secondary">Real experiences from satisfied vehicle owners</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 - Convenience -->
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Michael Thompson" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-montserrat font-semibold text-primary">Michael Thompson</h4>
+                            <p class="text-sm text-text-secondary">BMW X5 Owner</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary italic">"The mobile service is a game-changer. They detailed my BMW at my office while I was in meetings. Came back to a showroom-quality vehicle. Absolutely worth every penny."</p>
+                </div>
+
+                <!-- Testimonial 2 - Quality -->
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=150&h=150&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Sarah Martinez" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/11/02/14/27/model-2911363_150.jpg'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-montserrat font-semibold text-primary">Sarah Martinez</h4>
+                            <p class="text-sm text-text-secondary">Tesla Model S Owner</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary italic">"I'm extremely particular about my Tesla, and Johns Wash exceeded my expectations. The attention to detail and paint protection service is unmatched. My car looks better than new."</p>
+                </div>
+
+                <!-- Testimonial 3 - Environmental -->
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&h=150&auto=format&fit=crop&ixlib=rb-4.0.3" alt="David Chen" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_150.jpg'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-montserrat font-semibold text-primary">David Chen</h4>
+                            <p class="text-sm text-text-secondary">Prius Hybrid Owner</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary italic">"Finally found a car wash that aligns with my environmental values. Their eco-friendly products work amazingly well, and I love that they use water-saving techniques. Great results, clear conscience."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Gallery -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                    Dramatic Transformations
+                </h2>
+                <p class="text-lg text-text-secondary">See the Johns Wash difference in action</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Before/After 1 -->
+                <div class="card overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Luxury sedan transformation" class="w-full h-64 object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2'; this.onerror=null;" />
+                        <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Luxury Sedan Detail
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-montserrat font-semibold text-primary mb-2">Premium Paint Correction</h3>
+                        <p class="text-text-secondary text-sm">Complete paint restoration with ceramic coating protection</p>
+                    </div>
+                </div>
+
+                <!-- Before/After 2 -->
+                <div class="card overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="SUV interior detailing" class="w-full h-64 object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/05/06/16/32/car-1376190_960_720.jpg'; this.onerror=null;" />
+                        <div class="absolute top-4 left-4 bg-accent text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                            Interior Deep Clean
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-montserrat font-semibold text-primary mb-2">Complete Interior Restoration</h3>
+                        <p class="text-text-secondary text-sm">Leather conditioning, fabric protection, and odor elimination</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="services_menu.html" class="btn-secondary">View All Transformations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="section-padding bg-surface">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-primary mb-4">
+                    We Come to You
+                </h2>
+                <p class="text-lg text-text-secondary">Mobile service available throughout the metro area</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Map Placeholder -->
+                <div class="relative">
+                    <div class="bg-white rounded-lg shadow-custom-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Service area coverage map" class="w-full h-80 object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_960_720.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-primary bg-opacity-20 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="h-16 w-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                <h3 class="font-montserrat text-xl font-semibold mb-2">25+ Mile Service Radius</h3>
+                                <p class="text-sm">Covering all major metro areas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Check Availability Widget -->
+                <div class="card-surface">
+                    <h3 class="font-montserrat text-2xl font-semibold text-primary mb-6">Check Service Availability</h3>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-primary mb-2">Your Location</label>
+                            <input type="text" placeholder="Enter your address or ZIP code" class="input-field" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-primary mb-2">Service Type</label>
+                            <select class="input-field">
+                                <option>Mobile Detailing</option>
+                                <option>Premium Package</option>
+                                <option>Eco-Friendly Service</option>
+                                <option>Paint Protection</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-primary mb-2">Preferred Date</label>
+                            <input type="date" class="input-field" min="2025-09-14" />
+                        </div>
+                        
+                        <button type="button" onclick="window.location.href='booking_portal.html'" class="btn-primary w-full">
+                            Check Availability & Book
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6 p-4 bg-success-50 rounded-lg">
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-success font-semibold text-sm">Same-day service available in most areas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white section-padding">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-accent mr-2" viewBox="0 0 40 40" fill="currentColor">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z" fill="currentColor" opacity="0.2"/>
+                            <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                            <path d="M8 20h4m16 0h4M20 8v4m0 16v4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="font-montserrat font-bold text-lg">Johns Wash Premium</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">Expert automotive care with eco-friendly products and mobile convenience.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-base">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-base">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-base">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.017 0H7.983C3.582 0 0 3.582 0 7.983v4.034C0 16.418 3.582 20 7.983 20h4.034C16.418 20 20 16.418 20 12.017V7.983C20 3.582 16.418 0 12.017 0zM10 15A5 5 0 1110 5a5 5 0 010 10zm6.408-10.845a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-montserrat font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services_menu.html" class="text-gray-300 hover:text-accent transition-base">Mobile Detailing</a></li>
+                        <li><a href="services_menu.html" class="text-gray-300 hover:text-accent transition-base">Premium Packages</a></li>
+                        <li><a href="services_menu.html" class="text-gray-300 hover:text-accent transition-base">Paint Protection</a></li>
+                        <li><a href="services_menu.html" class="text-gray-300 hover:text-accent transition-base">Eco-Friendly Options</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="font-montserrat font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about_johns_wash.html" class="text-gray-300 hover:text-accent transition-base">About Us</a></li>
+                        <li><a href="contact_locations.html" class="text-gray-300 hover:text-accent transition-base">Contact</a></li>
+                        <li><a href="customer_dashboard.html" class="text-gray-300 hover:text-accent transition-base">Customer Portal</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-base">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-montserrat font-semibold text-lg mb-4">Contact</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span class="text-gray-300">(555) 123-WASH</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span class="text-gray-300">info@johnswash.com</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-5 w-5 text-accent mr-3 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-300">Serving Metro Area<br />25+ Mile Radius</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">© 2025 Johns Wash Premium. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-accent text-sm transition-base">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-accent text-sm transition-base">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-gray-300 hover:text-accent text-sm transition-base">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="fixed bottom-4 right-4 md:hidden z-50">
+        <a href="booking_portal.html" class="btn-primary shadow-cta flex items-center space-x-2">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+            </svg>
+            <span>Book Now</span>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation classes on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card, .card-surface, section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
